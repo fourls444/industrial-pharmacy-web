@@ -15,6 +15,7 @@ import {
 } from "react-icons/hi2";
 
 export default function IndustrialPharmacyPage() {
+    const [activeHistoryTab, setActiveHistoryTab] = useState(0);
 
     const colleges = [
         { name: "ราชวิทยาลัยเภสัชบำบัด", img: "/images/services/Services1.png" },
@@ -116,7 +117,7 @@ export default function IndustrialPharmacyPage() {
                         </div>
                         <div className={styles.imageOverlayText}>
                             <h3>วิทยาลัยเภสัชกรรมอุตสาหการ</h3>
-                            <p>(Thai College of Pharmacy)</p>
+                            <p>(The College of Industrial Pharmacy)</p>
                         </div>
                     </div>
 
@@ -126,6 +127,8 @@ export default function IndustrialPharmacyPage() {
                             ศูนย์กลางการพัฒนาองค์ความรู้และผู้เชี่ยวชาญด้านเภสัชกรรมอุตสาหการ
                             เพื่อยกระดับมาตรฐานวิชาชีพและอุตสาหกรรมยาไทยสู่ระดับสากล
                         </p>
+
+
 
                         <div className={styles.searchCard}>
                             <div className={styles.searchHeader}>
@@ -149,10 +152,13 @@ export default function IndustrialPharmacyPage() {
                         </div>
                     </div>
                 </div>
+
             </section>
 
-            {/* --- HISTORY SECTION --- */}
-            <HistorySection />
+            {/* --- HISTORY & COURSE SECTION --- */}
+            <div id="history-section">
+                <HistorySection activeTab={activeHistoryTab} setActiveTab={setActiveHistoryTab} />
+            </div>
 
             {/* --- 7 COLLEGES SECTION --- */}
             <section className={styles.collegesSection}>

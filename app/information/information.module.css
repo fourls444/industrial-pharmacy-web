@@ -1,0 +1,107 @@
+.contactSection {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.leftColumn {
+    flex: 1.2;
+}
+
+.locationImage {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.leftContent h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.leftContent p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.rightColumn {
+    flex: 0.8;
+}
+
+.contactCard {
+    background: #767620; /* Olive green */
+    border-radius: 30px;
+    padding: 50px 40px;
+    color: white;
+    box-shadow: 0 15px 40px rgba(118, 118, 32, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.cardTitle {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.infoList {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.infoItem {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.iconCircle {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.iconCircle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.itemContent h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.itemContent p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1024px) {
+    .layout {
+        flex-direction: column;
+    }
+    
+    .leftColumn, .rightColumn {
+        width: 100%;
+    }
+}

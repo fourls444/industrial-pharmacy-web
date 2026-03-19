@@ -1,0 +1,183 @@
+.committeeSection {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.header p {
+    font-size: 16px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Featured Profile Card */
+.featuredContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.featuredCard {
+    width: 320px;
+    background: transparent;
+    border-radius: 20px;
+    overflow: visible;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+    position: relative;
+    height: 380px;
+}
+
+.featuredCard:hover {
+    transform: translateY(-5px);
+}
+
+.photoWrapper {
+    position: relative;
+    background: transparent;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    mix-blend-mode: multiply;
+}
+
+.info {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background: #ffffff;
+    padding: 12px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    z-index: 3;
+    text-align: left;
+}
+
+.name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.role {
+    font-size: 12px;
+    color: #888;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Members Grid */
+.membersGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.memberCard {
+    background: transparent;
+    border-radius: 16px;
+    overflow: visible;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    position: relative;
+    height: 250px;
+}
+
+.memberCard:hover {
+    transform: translateY(-5px);
+}
+
+.memberPhotoWrapper {
+    position: relative;
+    background: transparent;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.memberPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    mix-blend-mode: multiply;
+}
+
+.memberInfo {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    background: #ffffff;
+    padding: 10px 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    z-index: 3;
+    text-align: left;
+}
+
+.memberName {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 3px;
+    line-height: 1.3;
+}
+
+.memberRole {
+    font-size: 10px;
+    color: #999;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+@media (max-width: 1200px) {
+    .membersGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .membersGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .featuredCard {
+        width: 280px;
+    }
+}
