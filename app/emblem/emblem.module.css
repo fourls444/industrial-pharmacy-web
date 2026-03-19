@@ -3,10 +3,18 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* ===== LAYOUT ===== */
 .layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -15,50 +23,73 @@
     align-items: stretch;
 }
 
+/* ===== FEATURE CARD ===== */
 .featuredCard {
-    background: #f4f4e7;
+    background: linear-gradient(to right,
+            #f7f7ef,
+            #ececd9,
+            #e4e4cf);
+
+    border: 1px solid #dadac3;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
     border-radius: 30px;
-    padding: 30px;
+    padding: 60px 40px 40px;
     position: relative;
+
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+
     grid-column: 1 / 2;
     grid-row: 1 / 4;
 }
 
+/* ===== QUOTE ===== */
 .quoteIcon {
     position: absolute;
-    top: 40px;
-    right: 40px;
-    font-size: 40px;
+    top: 100px;
+    right: 30px;
+    font-size: 50px;
     color: rgba(118, 118, 32, 0.2);
 }
 
+/* ===== LOGO ===== */
 .mainLogo {
     width: 120px;
     height: auto;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    /* 👈 ดันลง */
 }
 
-.title {
-    font-size: 16px;
+/* ===== TEXT ===== */
+.featuredCard .title {
+    font-size: 14px;
     font-weight: 700;
     color: #4a4a00;
-    margin-bottom: 12px;
-    line-height: 1.4;
-}
-
-.description {
-    font-size: 13px;
-    color: #666;
+    /* 👈 ให้เด่นขึ้น */
+    margin-bottom: 6px;
     line-height: 1.6;
-    margin: 0;
+    text-align: left;
 }
 
+.featuredCard .description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+    text-align: left;
+}
+
+/* ===== RIGHT SIDE CARDS ===== */
 .meaningGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -85,40 +116,56 @@
     display: block;
 }
 
-.cardTitle {
+.infoCard .cardTitle {
     font-size: 16px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2d2d2d;
+    letter-spacing: 0.2px;
 }
 
-.cardValue {
-    font-size: 13px;
-    color: #888;
-    line-height: 1.5;
-    margin: 0;
+.infoCard .cardValue {
+    font-size: 14px;
+    color: #7a7a7a;
+    line-height: 1.7;
 }
 
-/* Adjust grid for better fit */
-.card0 { grid-column: 2 / 3; grid-row: 1 / 2; }
-.card1 { grid-column: 2 / 3; grid-row: 2 / 3; }
-.card2 { grid-column: 2 / 3; grid-row: 3 / 4; }
-.card3 { grid-column: 1 / 2; grid-row: 4 / 5; }
-.card4 { grid-column: 2 / 3; grid-row: 4 / 5; }
+/* ===== GRID POSITION ===== */
+.card0 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
 
-/* Simpler:
-Layout is a 2-column flex.
-Left: Large Card.
-Right: A column of 3 cards.
-And another row below them? 
-Actually, I'll just follow the visual flow.
-*/
+.card1 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
 
+.card2 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.card3 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.card4 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
     .layout {
         grid-template-columns: 1fr;
     }
-    
+
+    .featuredCard {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
     .meaningGrid {
         grid-template-columns: repeat(2, 1fr);
     }

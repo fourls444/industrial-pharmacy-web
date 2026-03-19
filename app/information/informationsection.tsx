@@ -8,15 +8,15 @@ export default function InformationSection() {
             <div className={styles.layout}>
                 {/* Left Column: Image and Summary */}
                 <div className={styles.leftColumn}>
-                    <img 
-                        src="/images/location/location.png" 
-                        alt="Laboratory" 
-                        className={styles.locationImage} 
+                    <img
+                        src="/images/location/location.png"
+                        alt="Laboratory"
+                        className={styles.locationImage}
                     />
                     <div className={styles.leftContent}>
                         <h2>วิทยาลัยเภสัชกรรมอุตสาหการแห่งประเทศไทย</h2>
                         <p>
-                            ศูนย์กลางองค์ความรู้และผู้เชี่ยวชาญด้านเภสัชกรรมอุตสาหการ 
+                            ศูนย์กลางองค์ความรู้และผู้เชี่ยวชาญด้านเภสัชกรรมอุตสาหการ
                             ที่มุ่งยกระดับมาตรฐานวิชาชีพและอุตสาหกรรมยาไทยสู่สากล
                         </p>
                     </div>
@@ -25,8 +25,8 @@ export default function InformationSection() {
                 {/* Right Column: Contact Card */}
                 <div className={styles.rightColumn}>
                     <div className={styles.contactCard}>
-                        <h3 className={styles.cardTitle}>วิทยาลัยเภสัชกรรมอุตสาหการแห่งประเทศไทย</h3>
-                        
+                        <h3 className={styles.cardTitle}>วิทยาลัยคุ้มครองผู้บริโภคด้านยา</h3>
+
                         <div className={styles.infoList}>
                             <div className={styles.infoItem}>
                                 <div className={styles.iconCircle}>
@@ -35,7 +35,7 @@ export default function InformationSection() {
                                 <div className={styles.itemContent}>
                                     <h4>ที่อยู่</h4>
                                     <p>
-                                        อาคารมหิตลาธิเบศร ชั้น 8 กระทรวงสาธารณสุข เลขที่ 88/19 หมู่ 4 
+                                        อาคารมหิตลาธิเบศร ชั้น 8 กระทรวงสาธารณสุข เลขที่ 88/19 หมู่ 4
                                         ถนนติวานนท์ ตำบลตลาดขวัญ อำเภอเมือง จังหวัดนนทบุรี 11000
                                     </p>
                                 </div>

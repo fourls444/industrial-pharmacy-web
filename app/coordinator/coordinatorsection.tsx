@@ -8,20 +8,29 @@ export default function CoordinatorSection() {
         <div className={styles.coordinatorSection}>
             <div className={styles.layout}>
                 <div className={styles.imageSection}>
-                    <img 
-                        src="/images/coordinator/coordinator1.png" 
-                        alt="Coordinator Team" 
-                        className={styles.mainPhoto} 
+                    <img
+                        src="/images/coordinator/coordinator1.png"
+                        alt="Coordinator Team"
+                        className={styles.mainPhoto}
                     />
                 </div>
 
                 <div className={styles.profileCard}>
                     <div className={styles.profileHeader}>
-                        <h2 className={styles.name}>ดร.ภกญ. ปรวัลย์ อำกลัด</h2>
-                        <h3 className={styles.nameEn}>Porawan Aumklad, Ph.D., FCIP, FACP</h3>
+
+                        {/* ===== NAME ===== */}
+                        <div className={styles.nameGroup}>
+                            <h2 className={styles.name}>ดร.ภกญ. ปรวัลย์ อำกลัด</h2>
+                            <h3 className={styles.nameEn}>Porawan Aumklad, Ph.D., FCIP, FACP</h3>
+                        </div>
+
                         <div className={styles.divider}></div>
-                        <p className={styles.role}>ผู้ช่วยผู้จัดการแผนกวิชาการและนวัตกรรม</p>
-                        <p className={styles.roleEn}>Technical and Innovation Assistant Manager</p>
+
+                        {/* ===== ROLE ===== */}
+                        <div className={styles.roleGroup}>
+                            <p className={styles.role}>ผู้ช่วยผู้จัดการแผนกวิชาการและนวัตกรรม</p>
+                            <p className={styles.roleEn}>Technical and Innovation Assistant Manager</p>
+                        </div>
                     </div>
 
                     <div className={styles.contactList}>
