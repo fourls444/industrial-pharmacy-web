@@ -1,0 +1,66 @@
+.wrapper {
+    padding: 60px 80px;
+    background: #ffffff;
+}
+
+/* layout */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* LEFT */
+.left {
+    width: 360px;
+}
+
+/* TITLE */
+.left h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #4f5d2f;
+    margin-bottom: 25px;
+}
+
+/* MENU */
+.menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.menuList button {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    transition: all 0.25s ease;
+}
+
+/* normal */
+.item {
+    background: #eeeeee;
+    color: #4f5d2f;
+}
+
+.item:hover {
+    background: #e2e2e2;
+}
+
+/* active */
+.active {
+    background: linear-gradient(90deg, #6b7f4e, #b7c28a);
+    color: #ffffff;
+}
+
+/* RIGHT */
+.right {
+    flex: 1;
+}

@@ -1,0 +1,96 @@
+/* ===== WRAPPER ===== */
+.wrapper {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ===== LEFT ===== */
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.left h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.left p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* ===== RIGHT CARD ===== */
+.card {
+    background: linear-gradient(135deg, #8f9142, #a4a85a);
+    color: #fff;
+
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== TITLE ===== */
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ===== ITEM ===== */
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+/* ===== ICON ===== */
+.item img {
+    width: 18px;
+    margin-top: 3px;
+
+    /* ทำให้ icon กลืนกับพื้น */
+    filter: brightness(0) invert(1);
+}
+
+/* ===== TEXT ===== */
+.item strong {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.item p {
+    font-size: 13px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* ===== GLOBAL SLIDE UP ===== */
+.fadeUp {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fadeUp.show {
+    opacity: 1;
+    transform: translateY(0);
+}

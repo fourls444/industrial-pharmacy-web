@@ -1,0 +1,95 @@
+.wrapper {
+    padding: 60px 80px;
+    background: #ffffff;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.viewAll {
+    font-size: 14px;
+    color: #6b7f4e;
+    cursor: pointer;
+}
+
+/* list */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* card */
+.card {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+/* date */
+.dateBox {
+    width: 60px;
+    text-align: center;
+}
+
+.dateBox h3 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.dateBox span {
+    font-size: 12px;
+    color: #888;
+}
+
+/* divider */
+.divider {
+    width: 1px;
+    height: 80px;
+    background: #ddd;
+    margin: 0 20px;
+}
+
+/* content */
+.content {
+    flex: 1;
+}
+
+.content h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* meta */
+.meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.meta div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* image */
+.image img {
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}

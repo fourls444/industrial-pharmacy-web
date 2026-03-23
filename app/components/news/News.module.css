@@ -1,0 +1,149 @@
+.wrapper {
+    padding: 60px 80px;
+    background: linear-gradient(180deg, #f4f5f3, #ffffff);
+}
+
+/* header */
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sectionHeader h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.viewAll {
+    font-size: 14px;
+    color: #5b6f3a;
+    cursor: pointer;
+}
+
+/* arrows */
+.arrows button {
+    border: none;
+    background: #e9ece8;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+/* ===== featured ===== */
+.featuredCard {
+    display: flex;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.featuredCard img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.featuredContent {
+    padding: 30px;
+}
+
+.badge {
+    background: #6b7f4e;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* news badge override */
+.imageWrapper .badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.featuredContent h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.featuredContent p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.readMore {
+    border: 1px solid #6b7f4e;
+    background: transparent;
+    color: #6b7f4e;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* dots */
+.dots {
+    text-align: center;
+    margin: 15px 0 40px;
+}
+
+.dots span {
+    width: 6px;
+    height: 6px;
+    background: #ccc;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.dots .active {
+    background: #6b7f4e;
+}
+
+/* ===== news ===== */
+.newsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.imageWrapper {
+    position: relative;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.cardBody {
+    padding: 15px;
+}
+
+.cardBody h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.cardBody p {
+    font-size: 14px;
+    color: #666;
+}

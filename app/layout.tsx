@@ -4,7 +4,7 @@ import Footer from "./components/ui/Footer";
 
 export const metadata = {
   title: "วิทยาลัยเภสัชกรรมอุตสาหการ",
-  description: "The College of Industrial Pharmacy",
+  description: "College of Industrial Pharmacy of Thailand (CIPT)",
 };
 
 export default function RootLayout({

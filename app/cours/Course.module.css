@@ -1,0 +1,352 @@
+.wrapper {
+    max-width: 1100px;
+    padding: 20px 0;
+}
+
+/* ===== TITLE ===== */
+.title {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+/* ===== DESC ===== */
+.desc {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== ICON BOX ===== */
+.imageBox {
+    background: #7a7536; /* Olive/Greenish matching the icons */
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.imageBox img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Assume icons are dark and should be white on olive background */
+}
+
+/* ===== CONTENT ===== */
+.content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== PROGRAM SECTION ===== */
+.programSection {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.programGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+.programCard {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.programCard:hover {
+    transform: translateY(-5px);
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.iconSquare {
+    width: 48px;
+    height: 48px;
+    background: #f8f9f4; /* Light olive tint */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconSquare img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.cardTitleGroup h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.engSubtitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    letter-spacing: 0.5px;
+}
+
+.cardBodyDesc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.highlightsTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #7a7536;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    border-left: 3px solid #7a7536;
+}
+
+.highlightsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+.highlightItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.highlightItem::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #7a7536;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.detailBtn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    background: #fcfcfc;
+    border: 1px solid #eee;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.detailBtn:hover {
+    background: #f0f0f0;
+}
+
+/* Highlighted Card (Middle) */
+.highlighted {
+    border: 1px solid #7a7536;
+    background: #fafafa;
+}
+
+.highlighted .iconSquare {
+    background: #7a7536;
+}
+
+.highlighted .iconSquare img {
+    filter: brightness(0) invert(1);
+}
+
+.activeCardBtn {
+    background: #7a7536;
+    color: #fff;
+    border: none;
+}
+
+.activeCardBtn:hover {
+    background: #6a662e;
+}
+
+/* ===== BANNER ===== */
+.certificationBanner {
+    margin-top: 60px;
+    width: 100%;
+    background: linear-gradient(135deg, #7a7536 0%, #3e3b1b 100%);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.bannerContent {
+    display: flex;
+    gap: 25px;
+    flex: 1;
+}
+
+.bannerIcon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.bannerIcon img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.bannerText h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.bannerText p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.bannerActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 240px;
+}
+
+.primaryBtn, .secondaryBtn {
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primaryBtn {
+    background: #fff;
+    color: #1a1a1a;
+    border: none;
+}
+
+.primaryBtn:hover {
+    background: #f0f0f0;
+}
+
+.secondaryBtn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.secondaryBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 992px) {
+    .programGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certificationBanner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+    }
+}

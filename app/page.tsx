@@ -1,4 +1,4 @@
-import IndustrialPharmacyPage from "./industrial-pharmacy/page";
+import IndustrialPharmacyPage from "./industrial-phamacy/page";
 
 export default function Home() {
   return <IndustrialPharmacyPage />;
