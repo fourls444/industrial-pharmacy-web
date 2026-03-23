@@ -1,6 +1,7 @@
 .collegesSection {
     padding: 80px 40px;
-    background: url("/images/highlight/bg.jpg") center/cover no-repeat;
+    background: none;
+    /* ✅ เอาภาพพื้นหลังออก */
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -61,7 +62,8 @@
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    /* ✅ เอาเงาออก */
     cursor: pointer;
 }
 
@@ -71,10 +73,11 @@
     height: 100%;
 }
 
+/* ✅ เอา overlay มืดออก */
 .imageOverlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: transparent;
     transition: background 0.5s;
     z-index: 2;
 }
@@ -87,7 +90,7 @@
 }
 
 .slideCenter .imageOverlay {
-    background: rgba(0, 0, 0, 0);
+    background: transparent;
 }
 
 .slideLeft1 {
@@ -138,11 +141,9 @@
 .navButton:hover {
     background: #f8f8f8;
     transform: translateY(-50%) scale(1.05);
-    /* keep translateY */
 }
 
 .navPrev {
-    /* 600px * 0.65 = 390px. Center is 50%. Half of button width is 22px */
     left: calc(50% - 390px - 22px);
 }
 
@@ -171,7 +172,6 @@
 
 .activeDot {
     background: #7a7536;
-    /* Olive matching theme */
     transform: scale(1.2);
 }
 
@@ -196,7 +196,6 @@
 
     .navPrev {
         left: calc(50% - 292.5px - 22px);
-        /* 450 * 0.65 = 292.5 */
     }
 
     .navNext {
@@ -229,6 +228,5 @@
     .navPrev,
     .navNext {
         display: none;
-        /* Hide buttons on mobile, rely on tap */
     }
 }

@@ -34,8 +34,8 @@
 
 .imageOverlay {
     position: absolute;
-    bottom: 5rem;
-    left: 5rem;
+    bottom: 2rem;
+    left: 2rem;
     color: white;
     z-index: 10;
 }

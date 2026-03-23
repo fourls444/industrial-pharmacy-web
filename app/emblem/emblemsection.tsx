@@ -59,21 +59,24 @@ export default function EmblemSection() {
     return (
         <section className={styles.wrapper}>
             <div ref={gridRef} className={`${styles.grid} ${styles.fadeUp}`}>
-                
+
                 {/* MAIN LARGE CARD */}
                 <div className={styles.mainCard}>
                     <div className={styles.quoteIcon}>
-                        <img src="/images/course/course12.png" alt="quote" style={{ opacity: 0.1, width: '40px' }} />
+                        <img src="/images/emblem/emblem3.png" alt="quote" style={{ opacity: 0.1, width: '40px' }} />
                     </div>
-                    
+
                     <div className={styles.logoCenter}>
                         <img src="/images/emblem/emblem1.png" alt="CIPT Logo" className={styles.logo} />
                     </div>
-                    
+
                     <div className={styles.mainContent}>
                         <h3>ตราสัญลักษณ์ของวิทยาลัยเภสัชกรรมอุตสาหการแห่งประเทศไทย</h3>
                         <p>
-                            ตราสัญลักษณ์ของวิทยาลัยเภสัชกรรมอุตสาหการแห่งประเทศไทย สะท้อนอัตลักษณ์ของวิชาชีพเภสัชกรรมในภาคอุตสาหกรรม โดยผสมผสานสัญลักษณ์ที่สื่อถึงองค์ความรู้ด้านการเตรียมยา การผลิตในระดับอุตสาหกรรม และการพัฒนาอย่างต่อเนื่องของวิชาชีพ สีทองและสีเขียวมะกอกสื่อถึงความเจริญก้าวหน้า ความมั่นคง และบทบาทของเภสัชกรในการขับเคลื่อนมาตรฐานอุตสาหกรรมยาอย่างยั่งยืน.
+                            ตราสัญลักษณ์ของวิทยาลัยเภสัชกรรมอุตสาหการแห่งประเทศไทย
+                            สะท้อนอัตลักษณ์ของวิชาชีพเภสัชกรรมในภาคอุตสาหกรรมโดยผสมผสานสัญลักษณ์ที่สื่อถึงองค์ความรู้ด้านการเตรียมยา
+                            การผลิตในระดับอุตสาหกรรมและการพัฒนาอย่างต่อเนื่องของวิชาชีพสีทองและสีเขียวมะกอกสื่อถึงความเจริญก้าวหน้า
+                            ความมั่นคงและบทบาทของเภสัชกรในการขับเคลื่อนมาตรฐานอุตสาหกรรมยาอย่างยั่งยืน.
                         </p>
                     </div>
                 </div>

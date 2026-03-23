@@ -1,352 +1,354 @@
-.wrapper {
-    max-width: 1100px;
-    padding: 20px 0;
+.coursesWrapper {
+    width: 100%;
 }
 
-/* ===== TITLE ===== */
-.title {
+/* ===================== HEADING ===================== */
+.heading {
     font-size: 32px;
     font-weight: 800;
+    color: #111;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
     text-align: center;
-    margin-bottom: 15px;
-    color: #1a1a1a;
 }
 
-/* ===== DESC ===== */
-.desc {
-    font-size: 16px;
-    color: #666;
+.subHeading {
+    font-size: 14.5px;
+    color: #555;
+    margin: 0 0 32px 0;
+    line-height: 1.7;
     text-align: center;
-    margin-bottom: 50px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* ===== GRID ===== */
-.grid {
+/* ===================== CARDS ROW ===================== */
+.cardsRow {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 20px;
+    margin-bottom: 28px;
 }
 
-/* ===== CARD ===== */
-.card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+/* ===================== COURSE CARD ===================== */
+.courseCard {
+    border: 1px solid #e8e8dc;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    overflow: hidden;
+    background: #fff;
+}
+
+.courseCard:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+}
+
+/* HOVER HEADER */
+.courseCard:hover .cardHeader {
+    background: linear-gradient(to right, #f0f0d8 0%, #ffffff 80%);
+}
+
+/* HOVER BUTTON */
+.courseCard:hover .downloadBtn {
+    background: linear-gradient(to right, #8a8a3a 0%, #a0a050 100%);
+    border-top-color: transparent;
+    color: #fff;
+}
+
+/* --- CARD HEADER --- */
+.cardHeader {
+    display: flex;
     align-items: flex-start;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #f0f0f0;
+    gap: 14px;
+    padding: 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #e8e8dc;
+    min-height: 120px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-}
-
-/* ===== ICON BOX ===== */
-.imageBox {
-    background: #7a7536; /* Olive/Greenish matching the icons */
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
+.cardIcon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #f0f0d8;
+    border-radius: 12px;
+}
+
+.cardIcon svg {
+    stroke: #72721B;
+}
+
+.cardTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 4px 0;
+}
+
+.cardSubTitle {
+    font-size: 10px;
+    font-weight: 600;
+    color: #888;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* --- BODY --- */
+.cardBody {
+    flex: 1;
+    padding: 20px 24px;
+}
+
+.cardDesc {
+    font-size: 13.5px;
+    color: #555;
+    line-height: 1.7;
     margin-bottom: 20px;
 }
 
-.imageBox img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    filter: brightness(0) invert(1); /* Assume icons are dark and should be white on olive background */
-}
-
-/* ===== CONTENT ===== */
-.content h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-}
-
-.content p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ===== PROGRAM SECTION ===== */
-.programSection {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.programGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    width: 100%;
-}
-
-.programCard {
-    background: #ffffff;
-    border-radius: 24px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    border: 1px solid #f0f0f0;
-    transition: transform 0.3s ease;
-}
-
-.programCard:hover {
-    transform: translateY(-5px);
-}
-
-.cardHeader {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.iconSquare {
-    width: 48px;
-    height: 48px;
-    background: #f8f9f4; /* Light olive tint */
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.iconSquare img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-
-.cardTitleGroup h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 4px;
-}
-
-.engSubtitle {
-    font-size: 11px;
-    font-weight: 600;
-    color: #999;
-    letter-spacing: 0.5px;
-}
-
-.cardBodyDesc {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.highlightsTitle {
+.detailTitle {
     font-size: 14px;
     font-weight: 700;
-    color: #7a7536;
     margin-bottom: 12px;
-    padding-left: 10px;
-    border-left: 3px solid #7a7536;
+    padding-left: 12px;
+    border-left: 4px solid #7a7536;
 }
 
-.highlightsList {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 30px;
-    flex: 1;
+.detailList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.highlightItem {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
+.detailList li {
+    font-size: 13px;
     color: #555;
-}
-
-.highlightItem::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background: #7a7536;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.detailBtn {
-    width: 100%;
-    padding: 14px;
-    border-radius: 12px;
-    background: #fcfcfc;
-    border: 1px solid #eee;
-    font-size: 14px;
-    font-weight: 600;
-    color: #444;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.detailBtn:hover {
-    background: #f0f0f0;
-}
-
-/* Highlighted Card (Middle) */
-.highlighted {
-    border: 1px solid #7a7536;
-    background: #fafafa;
-}
-
-.highlighted .iconSquare {
-    background: #7a7536;
-}
-
-.highlighted .iconSquare img {
-    filter: brightness(0) invert(1);
-}
-
-.activeCardBtn {
-    background: #7a7536;
-    color: #fff;
-    border: none;
-}
-
-.activeCardBtn:hover {
-    background: #6a662e;
-}
-
-/* ===== BANNER ===== */
-.certificationBanner {
-    margin-top: 60px;
-    width: 100%;
-    background: linear-gradient(135deg, #7a7536 0%, #3e3b1b 100%);
-    border-radius: 24px;
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    color: #fff;
-    overflow: hidden;
+    margin-bottom: 6px;
+    padding-left: 14px;
     position: relative;
 }
 
-.bannerContent {
-    display: flex;
-    gap: 25px;
-    flex: 1;
+.detailList li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #7a7536;
 }
 
-.bannerIcon {
-    width: 56px;
-    height: 56px;
+/* --- BUTTON --- */
+.downloadBtn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-top: 1px solid #e8e8dc;
+    background: transparent;
+    color: #555;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* ❌ ปิด featuredCard ไม่ให้มีผล */
+.featuredCard .cardHeader,
+.featuredCard .downloadBtn {
+    all: unset;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+    .cardsRow {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================== CERT FOOTER ===================== */
+.certFooter {
+    background: url("/images/course/bg.png") center/cover no-repeat;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    padding: 36px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    color: #fff;
+}
+
+/* ลายเส้นพื้นหลัง */
+.certFooter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+}
+
+/* LEFT */
+.certLeft {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    max-width: 60%;
+    z-index: 1;
+}
+
+.certIcon {
+    width: 50px;
+    height: 50px;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 14px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
 }
 
-.bannerIcon img {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0) invert(1);
-}
-
-.bannerText h3 {
-    font-size: 24px;
+/* TEXT */
+.certText h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
     font-weight: 700;
-    margin-bottom: 12px;
 }
 
-.bannerText p {
-    font-size: 15px;
-    line-height: 1.6;
-    opacity: 0.9;
-    max-width: 600px;
+.certText p {
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.95;
 }
 
-.bannerActions {
+.certText strong {
+    font-weight: 700;
+    color: #fff;
+}
+
+/* RIGHT BUTTONS */
+.certActions {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    min-width: 240px;
+    z-index: 1;
 }
 
-.primaryBtn, .secondaryBtn {
-    padding: 14px 24px;
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: 700;
+/* PRIMARY */
+.certBtnPrimary {
+    background: #fff;
+    color: #6b6f1d;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* SECONDARY */
+.certBtnSecondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.certBtnSecondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===================== HOLISTIC SECTION ===================== */
+.holisticSection {
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
+.holisticHeader {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.holisticGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.holisticCard {
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    border-radius: 24px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.holisticCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: #e2e2ca;
+}
+
+.holisticIconContainer {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 16px rgba(122, 117, 54, 0.2);
 }
 
-.primaryBtn {
-    background: #fff;
-    color: #1a1a1a;
-    border: none;
+.holisticIconImg {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
 }
 
-.primaryBtn:hover {
-    background: #f0f0f0;
+.holisticTitle {
+    font-size: 19px;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
 }
 
-.secondaryBtn {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.holisticDesc {
+    font-size: 14.5px;
+    color: #64748b;
+    line-height: 1.6;
 }
 
-.secondaryBtn:hover {
-    background: rgba(255, 255, 255, 0.2);
+/* --- RESPONSIVE HOLISTIC --- */
+@media (max-width: 1024px) {
+    .holisticGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
-@media (max-width: 992px) {
-    .programGrid {
+@media (max-width: 768px) {
+    .holisticGrid {
         grid-template-columns: 1fr;
     }
-    
-    .certificationBanner {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 30px;
+
+    .holisticSection {
+        margin-bottom: 60px;
     }
 }

@@ -8,7 +8,7 @@ import Vision from "../../vision-and-mission/VisionSection";
 import Course from "../../cours/CourseSection";
 import Field from "../../field-of-expertise/FieldSection";
 import Committee from "../../committee/CommitteeSection_v2";
-import Emblem from "../../emblem/EmblemSection_v2";
+import Emblem from "../../emblem/EmblemSection";
 import Contact from "../../contact-and-location/ContactSection";
 
 export default function MenuSection() {

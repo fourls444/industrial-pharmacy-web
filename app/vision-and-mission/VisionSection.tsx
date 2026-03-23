@@ -14,49 +14,52 @@ export default function VisionSection() {
                 </p>
             </div>
 
-            {/* VISION CARD */}
+            {/* VISION */}
             <div className={styles.card}>
-                <div className={styles.cardContent}>
+                <div className={styles.imageBox}>
+                    <img src="/images/vision and mission/vision1.png" alt="Vision" />
+                </div>
+
+                <div className={styles.textCard}>
                     <h3 className={styles.cardTitle}>วิสัยทัศน์ (Vision)</h3>
                     <p className={styles.cardDesc}>
                         เป็นองค์กรหลักในการประเมินความรู้และทักษะทางวิชาชีพเภสัชกรรมที่มีมาตรฐานสากล
                         มีความเที่ยงธรรม และเป็นที่ยอมรับในระดับนานาชาติ
                     </p>
                 </div>
-                <div className={styles.imageBox}>
-                    <img src="/images/vision and mission/vision1.png" alt="Vision" />
-                </div>
             </div>
 
-            {/* MISSION CARD */}
+            {/* MISSION */}
             <div className={styles.card}>
-                <div className={styles.cardContent}>
-                    <h3 className={styles.cardTitle}>พันธกิจ (Mission)</h3>
-                    <p className={styles.cardDesc}>
-                        จัดทำและพัฒนาหลักเกณฑ์ วิธีการ และเครื่องมือ ประเมินความรู้ความสามารถทางวิชาชีพให้ทันสมัย <br />
-                        บริหารจัดการการสอบขึ้นทะเบียนฯให้เป็นไปตามมาตรฐาน
-                        ความปลอดภัยและความยุติธรรมสูงสุด ส่งเสริมวิจัยและพัฒนาด้านการวัดผลและประเมินผลการศึกษา <br />
-                        ทางเภสัชกรรมประสานงานร่วมกับสถาบันการศึกษาเพื่อยกระดับคุณภาพบัณฑิตเภสัชศาสตร์
-                    </p>
-                </div>
                 <div className={styles.imageBox}>
                     <img src="/images/vision and mission/vision2.png" alt="Mission" />
                 </div>
+
+                <div className={styles.textCard}>
+                    <h3 className={styles.cardTitle}>พันธกิจ (Mission)</h3>
+                    <p className={styles.cardDesc}>
+                        จัดทำและพัฒนาหลักเกณฑ์ วิธีการ และเครื่องมือ ประเมินความรู้ความสามารถทางวิชาชีพให้ทันสมัย
+                        บริหารจัดการการสอบขึ้นทะเบียนฯให้เป็นไปตามมาตรฐาน ความปลอดภัยและความยุติธรรมสูงสุด
+                        ส่งเสริมวิจัยและพัฒนาด้านการวัดผลและประเมินผลการศึกษาทางเภสัชกรรม
+                        ประสานงานร่วมกับสถาบันการศึกษาเพื่อยกระดับคุณภาพบัณฑิตเภสัชศาสตร์
+                    </p>
+                </div>
             </div>
 
-            {/* GOAL CARD */}
+            {/* GOAL */}
             <div className={styles.card}>
-                <div className={styles.cardContent}>
-                    <h3 className={styles.cardTitle}>เป้าหมาย</h3>
-                    <div className={styles.goalList}>
-                        <p><span>Standardization:</span> เพื่อให้การสอบมีความเป็นมาตรฐานเดียวกันทั่วประเทศ ไม่ว่าผู้สมัครจะจบจากสถาบันใด</p>
-                        <p><span>Competency-Based:</span> เน้นการวัดสมรรถนะที่จำเป็นในการปฏิบัติงานจริง มากกว่าเพียงแค่ความจำในตำรา</p>
-                        <p><span>Integrity:</span> รักษาความลับและระบบรักษาความปลอดภัยของข้อสอบอย่างเข้มงวดในทุกขั้นตอน</p>
-                        <p><span>Continuous Development:</span> นำผลการประเมินมาวิเคราะห์เพื่อพัฒนาหลักสูตรเภสัชศาสตร์ในภาพรวมของประเทศ</p>
-                    </div>
-                </div>
                 <div className={styles.imageBox}>
                     <img src="/images/vision and mission/vision3.png" alt="Goal" />
+                </div>
+
+                <div className={styles.textCard}>
+                    <h3 className={styles.cardTitle}>เป้าหมาย</h3>
+                    <div className={styles.goalList}>
+                        <p><span>Standardization:</span> เพื่อให้การสอบมีมาตรฐานเดียวกันทั่วประเทศ</p>
+                        <p><span>Competency-Based:</span> เน้นการวัดสมรรถนะในการทำงานจริง</p>
+                        <p><span>Integrity:</span> รักษาความปลอดภัยของข้อสอบอย่างเข้มงวด</p>
+                        <p><span>Continuous Development:</span> พัฒนาหลักสูตรจากผลการประเมิน</p>
+                    </div>
                 </div>
             </div>
         </div>
