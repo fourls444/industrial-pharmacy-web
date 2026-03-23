@@ -7,7 +7,7 @@ export default function Header() {
                 <img src="/images/favicon.png" className={styles.logo} />
                 <div>
                     <h1>วิทยาลัยเภสัชกรรมอุตสาหการ</h1>
-                    <p>The College of Industrial Pharmacy</p>
+                    <p>องค์กรวิชาชีพที่มุ่งพัฒนาองค์ความรู้ ความเชี่ยวชาญ และมาตรฐานวิชาชีพด้านเภสัชกรรมอุตสาหการของประเทศไทย</p>
                 </div>
             </div>
 
