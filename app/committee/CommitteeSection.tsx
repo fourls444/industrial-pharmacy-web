@@ -11,17 +11,17 @@ export default function CommitteeSection() {
 
     const members = [
         { name: "ภก. วีรยุทธ วีระรัศมี", position: "รองประธาน", img: "/images/committee/committee2.png" },
-        { name: "ผศ.ดร.ภก. สถาพร นิ่มกุลรัตน์", position: "เลขานุการ", img: "/images/committee/committee3.png" },
-        { name: "ภญ. รัตนา เจียรสุวรรณ", position: "นายทะเบียน", img: "/images/committee/committee4.png" },
-        { name: "ผศ.ดร.ภญ. นฤพร สุรัตนทวีบูรณ์", position: "เหรัญญิก", img: "/images/committee/committee5.png" },
-        { name: "ศ.ดร.ภก. พรสักดิ์ ศรีอมรศักดิ์", position: "เลขาธิการวิทยาลัยและกรรมการกลาง", img: "/images/committee/committee6.png" },
-        { name: "รศ.ดร.ภก. สาธิต พุทธิพิพัฒน์ขจร", position: "รองผู้อำนวยการวิทยาลัย", img: "/images/committee/committee7.png" },
-        { name: "ภก. ปราโมทย์ ชลฤทธิ์", position: "รองผู้อำนวยการวิทยาลัย", img: "/images/committee/committee8.png" },
-        { name: "ภก. วีรยุทธ วีระรัศมี", position: "รองผู้อำนวยการวิทยาลัย", img: "/images/committee/committee9.png" },
-        { name: "ภก. ประเสริฐ เลิศพัลพันธ์", position: "กรรมการกลาง", img: "/images/committee/committee10.png" },
-        { name: "ภญ. พรรณพร ร่างเมตรโชติ", position: "กรรมการกลาง", img: "/images/committee/committee11.png" },
-        { name: "ผศ.ดร.ภญ. นฤพร สุรัตนทวีบูรณ์", position: "เหรัญญิกวิทยาลัย", img: "/images/committee/committee12.png" },
-        { name: "ดร. ภญ. โสระดา หวังเมธีกุล", position: "นายทะเบียนวิชาชีพ", img: "/images/committee/committee13.png" },
+        { name: "ผศ.ดร.ภก. สถาพร นิ่มกุลรัตน์", position: "เลขาธิการ", img: "/images/committee/committee3.png" },
+        { name: "ภญ. วัลภา เตียรสุวรรณ์", position: "นายทะเบียน" },
+        { name: "ผศ.ดร.ภญ. นฤพร สุตัณฑวิบูลย์", position: "เหรัญญิก", img: "/images/committee/committee4.png" },
+        { name: "ศ.ดร.ภก. พรสักดิ์ ศรีอมรศักดิ์", position: "เลขาธิการวิทยาลัยและกรรมการกลาง", img: "/images/committee/committee5.png" },
+        { name: "รศ.ดร.ภก. สาธิต พุทธิพิพัฒน์ขจร", position: "รองผู้อำนวยการวิทยาลัย" },
+        { name: "ภก. ปราโมทย์ ชลยุทธ์", position: "รองผู้อำนวยการวิทยาลัย", img: "/images/committee/committee6.png" },
+        { name: "ภก. วีรยุทธ จิรรัศมิ์", position: "รองผู้อำนวยการวิทยาลัย" },
+        { name: "ภก. ประเสริฐ เลิศเลอพันธ์", position: "กรรมการกลาง", img: "/images/committee/committee7.png" },
+        { name: "ภญ. พร้อมพร รจำนงธนาโชติ", position: "กรรมการกลาง", img: "/images/committee/committee8.png" },
+        { name: "ผศ.ดร.ภญ. นฤพร สุตัณฑวิบูลย์", position: "เหรัญญิกวิทยาลัย" },
+        { name: "ดร. ภญ. โศรดา หวังเมธีกุล", position: "นายทะเบียนวิทยาลัย", img: "/images/committee/committee9.png" },
     ];
 
     useEffect(() => {
@@ -58,10 +58,9 @@ export default function CommitteeSection() {
                 </p>
             </div>
 
-            {/* PRESIDENT */}
             <div className={styles.presidentCard}>
                 <div className={styles.imageBox}>
-                    <img src={president.img} alt={president.name} />
+                    {president.img && <img src={president.img} alt={president.name} />}
                 </div>
                 <div className={styles.presidentInfo}>
                     <h3>{president.name}</h3>
@@ -78,7 +77,7 @@ export default function CommitteeSection() {
                         style={{ transitionDelay: `${(i % 4) * 0.1}s` }}
                     >
                         <div className={styles.cardImage}>
-                            <img src={item.img} alt={item.name} />
+                            {item.img && <img src={item.img} alt={item.name} />}
                         </div>
                         <div className={styles.info}>
                             <h4>{item.name}</h4>

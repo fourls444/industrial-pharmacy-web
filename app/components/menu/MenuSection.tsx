@@ -3,13 +3,13 @@ import { useState } from "react";
 import styles from "./Menu.module.css";
 
 /* ✅ import เฉพาะ History ก่อน */
-import History from "../../history/HistorySection";
-import Vision from "../../vision-and-mission/VisionSection";
-import Course from "../../cours/CourseSection";
-import Field from "../../field-of-expertise/FieldSection";
-import Committee from "../../committee/CommitteeSection_v2";
-import Emblem from "../../emblem/EmblemSection";
-import Contact from "../../contact-and-location/ContactSection";
+import History from "@/app/history/HistorySection";
+import Vision from "@/app/vision-and-mission/VisionSection";
+import Course from "@/app/cours/CourseSection";
+import Field from "@/app/field-of-expertise/FieldSection";
+import Committee from "@/app/committee/CommitteeSection";
+import Emblem from "@/app/emblem/EmblemSection";
+import Contact from "@/app/contact-and-location/ContactSection";
 
 export default function MenuSection() {
     const [active, setActive] = useState(0);

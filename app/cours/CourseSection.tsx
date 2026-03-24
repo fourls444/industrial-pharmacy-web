@@ -1,224 +1,221 @@
+"use client";
+
+import Image from "next/image";
 import styles from "./Course.module.css";
+import {
+    FaGraduationCap,
+    FaRegEye,
+    FaShieldHalved,
+    FaDownload,
+    FaBook,
+    FaAward,
+    FaFileLines,
+    FaChartLine,
+    FaFlask,
+    FaChevronRight
+} from "react-icons/fa6";
+import { FaDollarSign } from "react-icons/fa";
 
-/* SVG Icons */
-const MedalIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" />
-        <path d="M8.21 13.89L7 21l5-3 5 3-1.21-7.11" />
-    </svg>
-);
+const mockCourseData = [
+    {
+        icon: <FaFileLines />,
+        title: "หลักสูตรระยะสั้น",
+        subtitle: "(CERTIFICATE IN PHARMACOGENOMICS AND PRECISION MEDICINE)",
+        desc: "เน้นการปฏิบัติจริงในเวชปฏิบัติ สำหรับเภสัชกรที่ต้องการต่อยอดทักษะการให้คำปรึกษาและแปลผลตรวจ",
+        detailTitle: "รายละเอียด",
+        details: [
+            "16 หน่วยกิต (ทฤษฎี 2 / ปฏิบัติ 14)",
+            "ฝึกปฏิบัติจริงในสถานพยาบาลจริง",
+            "ระยะเวลา: 4 เดือน (เต็มเวลา)",
+            "คุณสมบัติ: เภสัชกรที่มีใบประกอบวิชาชีพ"
+        ]
+    },
+    {
+        icon: <FaChartLine />,
+        title: "หลักสูตรแสดงความรู้ความชำนาญ",
+        subtitle: "PHARMACY RESIDENCY TRAINING",
+        desc: "พื้นฐานที่ต้องรู้เพื่อก้าวทันนวัตกรรม สำหรับเภสัชกรทั่วไปและบุคลากรการแพทย์",
+        detailTitle: "หัวข้อสำคัญ",
+        details: [
+            "โครงสร้าง: 134 หน่วยกิต",
+            "ฝึกระดับเข้มข้นในห้องปฏิบัติการและหอผู้ป่วยเฉพาะทาง",
+            "คุณสมบัติ: เภสัชกรที่ผ่านเกณฑ์การคัดเลือก ตามมาตรฐานราชวิทยาลัยเภสัชกรรมฯ"
+        ]
+    },
+    {
+        icon: <FaFlask />,
+        title: "หลักสูตรอบรมเชิงปฏิบัติการ",
+        subtitle: "PHARMACOGENOMICS FOR ALLIED HEALTH",
+        desc: "พื้นฐานที่ต้องรู้เพื่อก้าวทันนวัตกรรม สำหรับเภสัชกรทั่วไปและบุคลากรการแพทย์",
+        detailTitle: "รายละเอียด",
+        details: [
+            "โครงสร้าง: อบรม 16 ชั่วโมง (2 วัน)",
+            "ไฮไลท์: บูพื้นฐานความเข้าใจในเภสัชพันธุกรรม, การแพ้ยา, และจริยธรรมการแพทย์เฉพาะบุคคล",
+            "คุณสมบัติ: เภสัชกร, บุคลากรสหวิชาชีพ"
+        ]
+    }
+];
 
-const ChartIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 20V10" />
-        <path d="M18 20V4" />
-        <path d="M6 20v-4" />
-    </svg>
-);
-
-const ClockIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="12 6 12 12 16 14" />
-    </svg>
-);
-
-const DocIcon = () => (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
-        <line x1="12" y1="9" x2="8" y2="9" />
-    </svg>
-);
-
-const PersonIcon = () => (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-        <circle cx="12" cy="7" r="4" />
-    </svg>
-);
-
-const ApplyIcon = () => (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-    </svg>
-);
-
-export default function CoursesSection() {
+export default function CourseContent() {
     return (
-        <div className={styles.coursesWrapper}>
+        <div className={styles.container}>
 
-            {/* --- NEW HOLISTIC LEARNING SECTION --- */}
-            <div className={styles.holisticSection}>
-                <div className={styles.holisticHeader}>
-                    <h2 className={styles.heading}>
-                        การเรียนรู้แบบองค์รวมรอบด้านในอุตสาหกรรมยา
-                    </h2>
-                    <p className={styles.subHeading}>
-                        ครอบคลุมองค์ความรู้ตลอดการศึกษาของอุตสาหกรรมยาและผลิตภัณฑ์สุขภาพ
-                    </p>
-                </div>
+            {/* 🏛️ Top Section: Featured Hero (Old Block) */}
+            <div className={styles.heroGrid}>
+                <div className={styles.mainHeroCard}>
+                    <div className={styles.heroHeader}>
+                        <div className={styles.heroIconBox}>
+                            <FaGraduationCap />
+                        </div>
+                        <div className={styles.heroTitleArea}>
+                            <h1 className={styles.heroTitle}>หลักสูตรฝึกอบรมเฉพาะทาง</h1>
+                            <p className={styles.heroSub}>โดยอยู่ภายใต้การกำกับและรับรองของสภาเภสัชกรรม</p>
+                        </div>
+                    </div>
 
-                <div className={styles.holisticGrid}>
-                    {[
-                        { title: "วิจัยและพัฒนา", desc: "การพัฒนายาและผลิตภัณฑ์ใหม่", icon: "/images/course/course2.png" },
-                        { title: "การผลิต", desc: "กระบวนการผลิตตามมาตรฐาน GMP", icon: "/images/course/course3.png" },
-                        { title: "ควบคุมคุณภาพ", desc: "การทดสอบและรับรองคุณภาพ", icon: "/images/course/course4.png" },
-                        { title: "ประกันคุณภาพ", desc: "ระบบการจัดการคุณภาพ", icon: "/images/course/course5.png" },
-                        { title: "การขึ้นทะเบียน", desc: "การขึ้นทะเบียนตำรับยา", icon: "/images/course/course6.png" },
-                        { title: "เภสัชระวัง", desc: "ติดตามความปลอดภัยผลิตภัณฑ์", icon: "/images/course/course7.png" }
-                    ].map((item, idx) => (
-                        <div key={idx} className={styles.holisticCard}>
-                            <div className={styles.holisticIconContainer}>
-                                <img src={item.icon} alt={item.title} className={styles.holisticIconImg} />
+                    <div className={styles.heroBody}>
+                        <p className={styles.heroDesc}>
+                            ราชวิทยาลัยการคุ้มครองผู้บริโภคด้านยาและสุขภาพแห่งประเทศไทย ด้านการคุ้มครองผู้บริโภคด้านยา
+                            หลักสูตรออกแบบเพื่อพัฒนาศักยภาพเภสัชกรให้มีความรู้ความสามารถและทักษะ
+                            ในการดำเนินงานด้านการคุ้มครองผู้บริโภค
+                        </p>
+
+                        <div className={styles.heroTags}>
+                            <div className={styles.heroTag}>
+                                <FaDollarSign /> <span>กฎหมายยา</span>
                             </div>
-                            <h3 className={styles.holisticTitle}>{item.title}</h3>
-                            <p className={styles.holisticDesc}>{item.desc}</p>
+                            <div className={styles.heroTag}>
+                                <FaRegEye /> <span>กำกับดูแล</span>
+                            </div>
+                            <div className={styles.heroTag}>
+                                <FaShieldHalved /> <span>เฝ้าระวัง</span>
+                            </div>
                         </div>
-                    ))}
-                </div>
-            </div>
 
-            <h2 className={styles.heading}>
-                ประเภทหลักสูตรฝึกอบรม
-            </h2>
-
-            <p className={styles.subHeading}>
-                หลักสูตรที่มุ่งเน้นการพัฒนาสมรรถนะของเภสัชกรให้สามารถทำงานในระดับผู้เชี่ยวชาญ
-            </p>
-
-            <div className={styles.cardsRow}>
-
-                {/* CARD 1 */}
-                <div className={styles.courseCard}>
-                    <div className={styles.cardHeader}>
-                        <div className={styles.cardIcon}><MedalIcon /></div>
-                        <div>
-                            <h3 className={styles.cardTitle}>วุฒิบัตรและประกาศนียบัตร</h3>
-                            <p className={styles.cardSubTitle}>CERTIFICATE & DIPLOMA PROGRAMS</p>
+                        <div className={styles.heroBtnArea}>
+                            <button className={styles.heroDlBtn}>
+                                <div className={styles.heroDlIconBox}>
+                                    <FaDownload />
+                                </div>
+                                <span>ดาวน์โหลดรายละเอียดหลักสูตร</span>
+                            </button>
                         </div>
                     </div>
-
-                    <div className={styles.cardBody}>
-                        <p className={styles.cardDesc}>
-                            หลักสูตรเฉพาะทางที่ได้รับการรับรองจากสภาเภสัชกรรม
-                        </p>
-
-                        <div className={styles.detailSection}>
-                            <h4 className={styles.detailTitle}>หัวข้อสำคัญ</h4>
-                            <ul className={styles.detailList}>
-                                <li>การรับรองสมรรถนะ</li>
-                                <li>การประเมินผล</li>
-                                <li>มาตรฐานสากล</li>
-                                <li>ประกาศนียบัตร</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <button className={styles.downloadBtn}>
-                        <DocIcon /> ดูรายละเอียด
-                    </button>
                 </div>
 
-                {/* CARD 2 ✅ แก้แล้ว */}
-                <div className={styles.courseCard}>
-                    <div className={styles.cardHeader}>
-                        <div className={styles.cardIcon}><ChartIcon /></div>
-                        <div>
-                            <h3 className={styles.cardTitle}>พัฒนาวิชาชีพต่อเนื่อง</h3>
-                            <p className={styles.cardSubTitle}>CONTINUING PROFESSIONAL DEVELOPMENT</p>
-                        </div>
-                    </div>
-
-                    <div className={styles.cardBody}>
-                        <p className={styles.cardDesc}>
-                            โปรแกรมพัฒนาความรู้และทักษะอย่างต่อเนื่อง
-                        </p>
-
-                        <div className={styles.detailSection}>
-                            <h4 className={styles.detailTitle}>หัวข้อสำคัญ</h4>
-                            <ul className={styles.detailList}>
-                                <li>อัปเดตความรู้</li>
-                                <li>เครือข่าย</li>
-                                <li>ภาวะผู้นำ</li>
-                                <li>เรียนรู้ตลอดชีวิต</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <button className={styles.downloadBtn}>
-                        <DocIcon /> ดูรายละเอียด
-                    </button>
-                </div>
-
-                {/* CARD 3 */}
-                <div className={styles.courseCard}>
-                    <div className={styles.cardHeader}>
-                        <div className={styles.cardIcon}><ClockIcon /></div>
-                        <div>
-                            <h3 className={styles.cardTitle}>หลักสูตรฝึกอบรมระยะสั้น</h3>
-                            <p className={styles.cardSubTitle}>SHORT-TERM TRAINING PROGRAMS</p>
-                        </div>
-                    </div>
-
-                    <div className={styles.cardBody}>
-                        <p className={styles.cardDesc}>
-                            หลักสูตรอบรมเข้มข้น
-                        </p>
-
-                        <div className={styles.detailSection}>
-                            <h4 className={styles.detailTitle}>หัวข้อสำคัญ</h4>
-                            <ul className={styles.detailList}>
-                                <li>วิจัยยา</li>
-                                <li>ควบคุมคุณภาพ</li>
-                                <li>นวัตกรรม</li>
-                                <li>GMP</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <button className={styles.downloadBtn}>
-                        <DocIcon /> ดูรายละเอียด
-                    </button>
-                </div>
-
-            </div>
-
-            {/* CERTIFICATION FOOTER */}
-            <div className={styles.certFooter}>
-                <div className={styles.certLeft}>
-                    <div className={styles.certIcon}>
-                        <img
-                            src="/images/course/course14.png"
-                            alt="icon"
-                            className={styles.certIconImg}
+                {/* Hero Right: Image & Balanced Stats */}
+                <div className={styles.heroRight}>
+                    <div className={styles.heroImageCard}>
+                        <Image
+                            src="/images/course/img1.jpg"
+                            alt="Pharmacy"
+                            width={800}
+                            height={400}
+                            className={styles.heroImg}
+                            priority
                         />
                     </div>
 
-                    <div className={styles.certText}>
-                        <h3>การรับรองทักษะ</h3>
-                        <p>
-                            ผู้ที่ผ่านการอบรมจากวิทยาลัยจะได้รับ
-                            <strong> การรับรองทักษะในระดับผู้เชี่ยวชาญเฉพาะทาง </strong>
-                            ซึ่งช่วยยกระดับความสามารถของบุคลากรในอุตสาหกรรมยาและผลิตภัณฑ์สุขภาพของประเทศ
-                        </p>
+                    <div className={styles.heroStatsGrid}>
+                        <div className={`${styles.heroStatCard} ${styles.heroStatGreen}`}>
+                            <FaBook className={styles.heroStatIcon} />
+                            <h2 className={styles.heroStatTitle}>การเรียนรู้</h2>
+                            <p className={styles.heroStatText}>ภาคทฤษฎีและปฏิบัติ เน้นทักษะวิชาชีพ</p>
+                        </div>
+                        <div className={`${styles.heroStatCard} ${styles.heroStatWhite}`}>
+                            <FaAward className={styles.heroStatIcon} style={{ color: '#8e9a4e' }} />
+                            <h2 className={styles.heroStatTitle}>การรับรอง</h2>
+                            <p className={styles.heroStatText}>ประกาศนียบัตร มาตรฐานวิชาชีพ</p>
+                        </div>
                     </div>
-                </div>
-
-                <div className={styles.certActions}>
-                    <button className={styles.certBtnPrimary}>
-                        <ApplyIcon /> สมัครเข้ารับการฝึกอบรม
-                    </button>
-
-                    <button className={styles.certBtnSecondary}>
-                        <DocIcon /> ดาวน์โหลดรายละเอียดหลักสูตร
-                    </button>
                 </div>
             </div>
 
+            <div className={styles.courseWrapper}>
+                {/* HEADING SECTION FOR NEW CARDS */}
+                <div className={styles.textHeadingBox}>
+                    <h2 className={styles.heading}>
+                        "ยกระดับมาตรฐานเภสัชกรรมชุมชน <br /> เพื่อการดูแลสุขภาพปฐมภูมิที่มีคุณภาพ"
+                    </h2>
+                    <p className={styles.subHeading}>
+                        วิทยาลัยเภสัชกรรมชุมชนแห่งประเทศไทย (วภช.): องค์กรวิชาการกลางมุ่งสร้างความเชี่ยวชาญ และมาตรฐานการบริการระดับปฐมภูมิที่มีคุณภาพ
+                    </p>
+                </div>
+
+                {/* 📚 ROW 1: SHORT TERM */}
+                <div className={styles.rowHeader}>
+                    <h2 className={styles.rowTitle}>หลักสูตรระยะสั้น</h2>
+                    <button className={styles.viewAllBtn}>
+                        ดูทั้งหมด <FaChevronRight style={{ fontSize: '10px', marginLeft: '4px' }} />
+                    </button>
+                </div>
+                <div className={styles.cardsRow}>
+                    {mockCourseData.map((course, i) => (
+                        <CourseCard key={i} {...course} />
+                    ))}
+                </div>
+
+                {/* 📚 ROW 2: MEDIUM TERM */}
+                <div className={styles.rowHeader}>
+                    <h2 className={styles.rowTitle}>หลักสูตรระยะกลาง</h2>
+                    <button className={styles.viewAllBtn}>
+                        ดูทั้งหมด <FaChevronRight style={{ fontSize: '10px', marginLeft: '4px' }} />
+                    </button>
+                </div>
+                <div className={styles.cardsRow}>
+                    {mockCourseData.map((course, i) => (
+                        <CourseCard key={i} {...course} title="หลักสูตรระยะกลาง" />
+                    ))}
+                </div>
+
+                {/* 📚 ROW 3: LONG TERM */}
+                <div className={styles.rowHeader}>
+                    <h2 className={styles.rowTitle}>หลักสูตรระยะยาว</h2>
+                    <button className={styles.viewAllBtn}>
+                        ดูทั้งหมด <FaChevronRight style={{ fontSize: '10px', marginLeft: '4px' }} />
+                    </button>
+                </div>
+                <div className={styles.cardsRow}>
+                    {mockCourseData.map((course, i) => (
+                        <CourseCard key={i} {...course} title="หลักสูตรระยะยาว" />
+                    ))}
+                </div>
+
+            </div>
+        </div>
+    );
+}
+
+function CourseCard({ icon, title, subtitle, desc, detailTitle, details }: any) {
+    return (
+        <div className={styles.courseCard}>
+            <div className={styles.cardHeader}>
+                <div className={styles.cardIcon}>
+                    <div style={{ fontSize: '24px', color: 'white', display: 'flex' }}>
+                        {icon}
+                    </div>
+                </div>
+                <div>
+                    <h3 className={styles.cardTitle}>{title}</h3>
+                    <p className={styles.cardSubTitle}>{subtitle}</p>
+                </div>
+            </div>
+
+            <div className={styles.cardBody}>
+                <p className={styles.cardDesc}>{desc}</p>
+                <div className={styles.detailSection}>
+                    <h4 className={styles.detailTitle}>{detailTitle}</h4>
+                    <ul className={styles.detailList}>
+                        {details.map((detail: string, i: number) => (
+                            <li key={i}>{detail}</li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+
+            <button className={styles.downloadBtn}>
+                <FaDownload /> ดาวน์โหลด
+            </button>
         </div>
     );
 }
