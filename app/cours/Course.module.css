@@ -503,4 +503,8 @@
     .heroHeader {
         padding: 1.5rem;
     }
+
+    .heroStatsGrid {
+        grid-template-columns: 1fr;
+    }
 }

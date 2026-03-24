@@ -30,6 +30,13 @@
     transition: all 0.8s ease;
 }
 
+@media (max-width: 480px) {
+    .presidentCard {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
 .presidentShow {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -83,6 +90,26 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 28px;
     justify-items: center;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ===== CARD ===== */

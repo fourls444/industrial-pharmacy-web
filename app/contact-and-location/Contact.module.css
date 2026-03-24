@@ -83,6 +83,14 @@
     line-height: 1.6;
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
 /* ===== GLOBAL SLIDE UP ===== */
 .fadeUp {
     opacity: 0;
@@ -93,4 +101,4 @@
 .fadeUp.show {
     opacity: 1;
     transform: translateY(0);
-}
+}

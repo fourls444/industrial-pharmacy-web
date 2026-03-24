@@ -36,6 +36,13 @@
     align-items: flex-start;
 }
 
+@media (max-width: 768px) {
+    .timelineItem {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
 .yearBox {
     background: linear-gradient(90deg, #fdfdf5 0%, #ffffff 100%);
     padding: 24px;

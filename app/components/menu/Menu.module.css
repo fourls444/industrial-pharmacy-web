@@ -3,6 +3,12 @@
     background: #ffffff;
 }
 
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 40px 20px;
+    }
+}
+
 /* layout */
 .container {
     max-width: 1200px;
@@ -12,9 +18,22 @@
     align-items: flex-start;
 }
 
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
 /* LEFT */
 .left {
     width: 360px;
+}
+
+@media (max-width: 1024px) {
+    .left {
+        width: 100%;
+    }
 }
 
 /* TITLE */
