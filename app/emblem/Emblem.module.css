@@ -157,23 +157,22 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
     .grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        gap: 20px;
     }
 
     .mainCard {
         grid-row: auto;
         grid-column: auto;
         max-width: 100%;
+        aspect-ratio: auto;
+        height: auto;
     }
 
-    .card1,
-    .card2,
-    .card3,
-    .card4,
-    .card5 {
+    .card1, .card2, .card3, .card4, .card5 {
         grid-column: auto;
         grid-row: auto;
     }

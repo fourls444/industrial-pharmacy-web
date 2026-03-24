@@ -5,7 +5,13 @@
 
 @media (max-width: 1024px) {
     .wrapper {
-        padding: 40px 20px;
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        padding: 30px 15px;
     }
 }
 
@@ -14,11 +20,17 @@
     max-width: 1200px;
     margin: auto;
     display: flex;
-    gap: 60px;
+    gap: 40px;
     align-items: flex-start;
 }
 
 @media (max-width: 1024px) {
+    .container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 800px) {
     .container {
         flex-direction: column;
         gap: 30px;
@@ -27,12 +39,32 @@
 
 /* LEFT */
 .left {
-    width: 360px;
+    width: 320px;
 }
 
 @media (max-width: 1024px) {
     .left {
+        width: 300px;
+    }
+}
+
+@media (max-width: 900px) {
+    .left {
+        width: 260px;
+    }
+    .menuList button {
+        padding: 14px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .left {
         width: 100%;
+    }
+    .menuList button {
+        padding: 16px 18px;
+        font-size: 16px;
     }
 }
 

@@ -36,7 +36,14 @@
     align-items: flex-start;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .timelineItem {
+        grid-template-columns: 180px 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 800px) {
     .timelineItem {
         grid-template-columns: 1fr;
         gap: 20px;
