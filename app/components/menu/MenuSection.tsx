@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./Menu.module.css";
 
 /* ✅ import เฉพาะ History ก่อน */
-import History from "../../history/HistorySection";
+import History from "../../history/HistorySection"
 import Vision from "../../vision-and-mission/VisionSection";
 import Course from "../../cours/CourseSection";
 import Field from "../../field-of-expertise/FieldSection";

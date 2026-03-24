@@ -78,7 +78,7 @@ export default function CommitteeSection() {
                         style={{ transitionDelay: `${(i % 4) * 0.1}s` }}
                     >
                         <div className={styles.cardImage}>
-                             <img src={item.img} alt={item.name} />
+                            <img src={item.img} alt={item.name} />
                         </div>
                         <div className={styles.info}>
                             <h4>{item.name}</h4>
