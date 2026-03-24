@@ -3,98 +3,96 @@
     max-width: 1100px;
     margin: auto;
     text-align: center;
-    padding-bottom: 60px;
 }
 
-.header {
-    margin-bottom: 50px;
-}
-
-.titleMain {
-    font-size: 32px;
-    font-weight: 800;
-    color: #1a1a1a;
-    margin-bottom: 20px;
-    line-height: 1.3;
+/* ===== TITLE ===== */
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .desc {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 40px;
 }
 
 /* ===== PRESIDENT ===== */
 .presidentCard {
-    width: 320px;
-    margin: 0 auto 60px;
+    width: 340px;
+    margin: 0 auto 50px;
     position: relative;
+
+    /* 🔥 animation */
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px) scale(0.95);
     transition: all 0.8s ease;
 }
 
 .presidentShow {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
-.imageBox {
-    background: #fcfcfc;
-    border-radius: 24px;
-    overflow: hidden;
-    aspect-ratio: 1 / 1;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eee;
-    margin-bottom: -40px;
-}
-
-.imageBox img {
+.presidentCard img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    border-radius: 20px;
 }
 
+/* ===== PRESIDENT INFO ===== */
 .presidentInfo {
-    position: relative;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 20px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
     width: 90%;
-    margin: 0 auto;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(8px);
+    padding: 14px;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
 }
 
 .presidentInfo h3 {
     font-size: 16px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin-bottom: 3px;
 }
 
 .presidentInfo p {
-    font-size: 14px;
-    color: #7a7536; /* Theme Olive */
+    font-size: 12px;
+    color: #666;
+}
+
+/* ===== ROLE ===== */
+.role {
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 10px;
     font-weight: 600;
+    color: #9aa24b;
 }
 
 /* ===== GRID ===== */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 28px;
+    justify-items: center;
 }
 
-/* ===== MEMBER CARD ===== */
+/* ===== CARD ===== */
 .card {
     position: relative;
     width: 100%;
+    max-width: 220px;
+
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
     transition: all 0.6s ease;
 }
 
@@ -103,74 +101,51 @@
     transform: translateY(0);
 }
 
-.cardImage {
-    background: #fcfcfc;
-    border-radius: 20px;
-    overflow: hidden;
-    aspect-ratio: 1 / 1.1;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
-    border: 1px solid #eee;
-    margin-bottom: -30px;
-}
-
-.cardImage img {
+/* ===== IMAGE ===== */
+.card img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
     transition: transform 0.5s ease;
 }
 
-.card:hover .cardImage img {
-    transform: translateY(-5px) scale(1.05);
+/* hover zoom */
+.card:hover img {
+    transform: scale(1.08);
 }
 
+/* ===== INFO ===== */
 .info {
-    position: relative;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 16px;
-    padding: 12px;
-    width: 92%;
-    margin: 0 auto;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    padding: 10px 12px;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     backdrop-filter: blur(6px);
+
+    transition: 0.3s;
 }
 
+/* hover effect */
+.card:hover .info {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* ===== TEXT ===== */
 .info h4 {
-    font-size: 13px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 2px;
 }
 
 .info p {
     font-size: 11px;
-    color: #888;
-    line-height: 1.4;
-    min-height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .titleMain {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 480px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+    color: #777;
 }

@@ -15,11 +15,7 @@
 
 /* overlay */
 .overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg,
-            rgba(0, 0, 0, 0.45) 0%,
-            rgba(120, 140, 80, 0.45) 100%);
+    background: transparent;
 }
 
 /* content */

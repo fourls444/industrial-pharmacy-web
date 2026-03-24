@@ -7,7 +7,7 @@ import History from "@/app/history/HistorySection";
 import Vision from "@/app/vision-and-mission/VisionSection";
 import Course from "@/app/cours/CourseSection";
 import Field from "@/app/field-of-expertise/FieldSection";
-import Committee from "@/app/committee/CommitteeSection_v2";
+import Committee from "@/app/committee/CommitteeSection";
 import Emblem from "@/app/emblem/EmblemSection";
 import Contact from "@/app/contact-and-location/ContactSection";
 
