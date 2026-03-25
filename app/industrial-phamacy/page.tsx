@@ -5,6 +5,7 @@ import MeetingSection from "../components/meeting/MeetingSection";
 import BannerSection from "../components/banner/BannerSection";
 import AboutSection from "../components/about/AboutSection";
 import MenuSection from "../components/menu/MenuSection";
+import RegistrationModal from "../components/ui/RegistrationModal";
 
 
 
@@ -19,6 +20,7 @@ export default function PharmacotherapyPage() {
                 <HighlightSection />
                 <MeetingSection />
                 <NewsSection />
+                <RegistrationModal />
 
             </main>
         </div>
