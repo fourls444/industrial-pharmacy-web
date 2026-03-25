@@ -26,8 +26,8 @@ export default function Header() {
                     </h1>
                     <p>
                         {lang === "TH"
-                            ? "องค์กรวิชาชีพที่มุ่งพัฒนาองค์ความรู้ ความเชี่ยวชาญ และมาตรฐานวิชาชีพด้านเภสัชกรรมอุตสาหการของประเทศไทย"
-                            : "Professional organization advancing knowledge, expertise, and standards in industrial pharmacy in Thailand"}
+                            ? "College of Industrial Pharmacy of Thailand (CIPT)"
+                            : "วิทยาลัยเภสัชกรรมอุตสาหการแห่งประเทศไทย (CIPT)"}
                     </p>
                 </div>
             </div>

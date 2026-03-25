@@ -20,7 +20,7 @@ export default function BannerSection() {
                 {/* ✅ เพิ่ม class text */}
                 <div className={styles.text}>
                     <h1>วิทยาลัยเภสัชกรรมอุตสาหการ</h1>
-                    <p>College of Industrial Pharmacy of Thailand (CIPT)</p>
+                    <p>College of Industrial Pharmacy</p>
                 </div>
             </div>
         </section>
