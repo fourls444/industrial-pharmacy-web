@@ -1,5 +1,6 @@
 .wrapper {
     width: 100%;
+    padding-left: 120px;
 }
 
 /* ===== TITLE ===== */
@@ -24,17 +25,39 @@
 .timeline {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 .timelineItem {
     display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 40px;
+    grid-template-columns: 300px 1fr;
+    gap: 100px;
     align-items: flex-start;
 }
 
+@media (max-width: 1400px) {
+    .wrapper {
+        padding-left: 80px;
+    }
+    .timelineItem {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        padding-left: 40px;
+    }
+    .timelineItem {
+        gap: 40px;
+        grid-template-columns: 240px 1fr;
+    }
+}
+
 @media (max-width: 1024px) {
+    .wrapper {
+        padding-left: 0;
+    }
     .timelineItem {
         grid-template-columns: 180px 1fr;
         gap: 30px;

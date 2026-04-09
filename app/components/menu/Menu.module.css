@@ -1,6 +1,7 @@
 .wrapper {
     padding: 60px 80px;
     background: #ffffff;
+    scroll-behavior: smooth;
 }
 
 @media (max-width: 1024px) {
@@ -39,6 +40,17 @@
 /* LEFT */
 .left {
     width: 320px;
+    flex-shrink: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    z-index: 10;
+}
+
+.leftInner {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 1024px) {
@@ -61,6 +73,10 @@
 @media (max-width: 800px) {
     .left {
         width: 100%;
+    }
+
+    .leftInner {
+        position: static;
     }
 
     .menuList button {
@@ -115,4 +131,15 @@
 /* RIGHT */
 .right {
     flex: 1;
+    min-width: 0;
+}
+
+/* section */
+.contentSection {
+    scroll-margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.contentSection:last-child {
+    margin-bottom: 0;
 }

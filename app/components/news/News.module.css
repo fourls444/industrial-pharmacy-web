@@ -18,7 +18,7 @@
 
 .viewAll {
     font-size: 14px;
-    color: #5b6f3a;
+    color: #7a7536;
     cursor: pointer;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .badge {
-    background: #6b7f4e;
+    background: #7a7536;
     color: #fff;
     padding: 5px 10px;
     font-size: 12px;
@@ -78,9 +78,9 @@
 }
 
 .readMore {
-    border: 1px solid #6b7f4e;
+    border: 1px solid #7a7536;
     background: transparent;
-    color: #6b7f4e;
+    color: #7a7536;
     padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
@@ -102,7 +102,7 @@
 }
 
 .dots .active {
-    background: #6b7f4e;
+    background: #7a7536;
 }
 
 /* ===== news ===== */
