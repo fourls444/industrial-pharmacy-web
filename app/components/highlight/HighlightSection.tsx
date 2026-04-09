@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "./Highlight.module.css";
@@ -9,19 +9,36 @@ const CARDS = [
     { id: 2, src: "/images/highlight/highlight2.png" },
     { id: 3, src: "/images/highlight/highlight3.png" },
     { id: 4, src: "/images/highlight/highlight4.png" },
-
+    { id: 5, src: "/images/highlight/highlight5.png" },
+    { id: 6, src: "/images/highlight/highlight6.png" },
 ];
 
 export default function CollegesSection() {
-    const [activeIndex, setActiveIndex] = useState(2); // Center card active default
+    const [activeIndex, setActiveIndex] = useState(2);
+    const [isPaused, setIsPaused] = useState(false);
 
-    const handlePrev = () => {
-        setActiveIndex((prev) => (prev === 0 ? CARDS.length - 1 : prev - 1));
-    };
+    const handleNext = useCallback(() => {
+        setActiveIndex((prev) =>
+            prev === CARDS.length - 1 ? 0 : prev + 1
+        );
+    }, []);
 
-    const handleNext = () => {
-        setActiveIndex((prev) => (prev === CARDS.length - 1 ? 0 : prev + 1));
-    };
+    const handlePrev = useCallback(() => {
+        setActiveIndex((prev) =>
+            prev === 0 ? CARDS.length - 1 : prev - 1
+        );
+    }, []);
+
+    // Auto-scroll loop: right to left (next)
+    useEffect(() => {
+        if (isPaused) return;
+
+        const interval = setInterval(() => {
+            handleNext();
+        }, 3000); // Change image every 3 seconds
+
+        return () => clearInterval(interval);
+    }, [handleNext, isPaused]);
 
     const getPositionClass = (index: number) => {
         const diff = (index - activeIndex + CARDS.length) % CARDS.length;
@@ -47,7 +64,11 @@ export default function CollegesSection() {
                 </p>
             </div>
 
-            <div className={styles.carouselContainer}>
+            <div
+                className={styles.carouselContainer}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+            >
                 <div className={styles.carouselTrack}>
                     {CARDS.map((card, index) => {
                         return (
@@ -61,27 +82,25 @@ export default function CollegesSection() {
                                     alt={`Highlight ${card.id}`}
                                     fill
                                     className={styles.cardImage}
-                                    sizes="(max-width: 768px) 80vw, 600px"
+                                    sizes="(max-width: 768px) 100vw, 800px"
+                                    quality={75} // ✅ แก้ error แล้ว
+                                    priority={index === activeIndex} // ✅ โหลดเฉพาะรูปหลัก
                                 />
                                 <div className={styles.imageOverlay}></div>
                             </div>
                         );
                     })}
 
-                    {/* Navigation Buttons */}
-                    <button className={`${styles.navButton} ${styles.navPrev}`} onClick={handlePrev}>
-                        <FiChevronLeft size={24} color="#555" />
-                    </button>
-                    <button className={`${styles.navButton} ${styles.navNext}`} onClick={handleNext}>
-                        <FiChevronRight size={24} color="#555" />
-                    </button>
+                    {/* Navigation Buttons: Removed as requested for auto-scroll */}
                 </div>
 
+                {/* Pagination */}
                 <div className={styles.pagination}>
                     {CARDS.map((_, index) => (
                         <button
                             key={index}
-                            className={`${styles.dot} ${index === activeIndex ? styles.activeDot : ""}`}
+                            className={`${styles.dot} ${index === activeIndex ? styles.activeDot : ""
+                                }`}
                             onClick={() => setActiveIndex(index)}
                             aria-label={`Go to slide ${index + 1}`}
                         />

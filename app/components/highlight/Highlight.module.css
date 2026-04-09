@@ -1,10 +1,13 @@
 .collegesSection {
-    padding: 80px 40px;
-    background: none;
-    /* ✅ เอาภาพพื้นหลังออก */
+    padding: 80px 0;
     width: 100%;
     position: relative;
     overflow: hidden;
+    background-color: #ffffff;
+    background-image: url("/images/highlight/bg.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .collegesHeader {
@@ -62,8 +65,7 @@
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-    box-shadow: none;
-    /* ✅ เอาเงาออก */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
 
@@ -73,11 +75,10 @@
     height: 100%;
 }
 
-/* ✅ เอา overlay มืดออก */
 .imageOverlay {
     position: absolute;
     inset: 0;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.4);
     transition: background 0.5s;
     z-index: 2;
 }
@@ -90,7 +91,7 @@
 }
 
 .slideCenter .imageOverlay {
-    background: transparent;
+    background: rgba(0, 0, 0, 0);
 }
 
 .slideLeft1 {
