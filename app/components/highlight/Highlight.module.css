@@ -51,7 +51,7 @@
 .carouselTrack {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 580px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,12 +60,12 @@
 
 .cardSlide {
     position: absolute;
-    width: 600px;
-    height: 380px;
+    width: 796px;
+    height: 528px;
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     cursor: pointer;
 }
 
@@ -78,7 +78,7 @@
 .imageOverlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.1);
     transition: background 0.5s;
     z-index: 2;
 }
@@ -95,26 +95,26 @@
 }
 
 .slideLeft1 {
-    transform: translateX(-65%) scale(0.8);
+    transform: translateX(-50%) scale(0.85);
     z-index: 2;
-    opacity: 1;
+    opacity: 0.8;
 }
 
 .slideRight1 {
-    transform: translateX(65%) scale(0.8);
+    transform: translateX(50%) scale(0.85);
     z-index: 2;
-    opacity: 1;
+    opacity: 0.8;
 }
 
 .slideHiddenLeft {
-    transform: translateX(-110%) scale(0.6);
+    transform: translateX(-100%) scale(0.7);
     z-index: 1;
     opacity: 0;
     pointer-events: none;
 }
 
 .slideHiddenRight {
-    transform: translateX(110%) scale(0.6);
+    transform: translateX(100%) scale(0.7);
     z-index: 1;
     opacity: 0;
     pointer-events: none;
@@ -145,11 +145,11 @@
 }
 
 .navPrev {
-    left: calc(50% - 390px - 22px);
+    left: calc(50% - 398px - 40px);
 }
 
 .navNext {
-    right: calc(50% - 390px - 22px);
+    right: calc(50% - 398px - 40px);
 }
 
 /* PAGINATION */
@@ -211,11 +211,11 @@
 
     .cardSlide {
         width: 300px;
-        height: 220px;
+        height: 200px;
     }
 
     .carouselTrack {
-        height: 260px;
+        height: 240px;
     }
 
     .slideLeft1 {
