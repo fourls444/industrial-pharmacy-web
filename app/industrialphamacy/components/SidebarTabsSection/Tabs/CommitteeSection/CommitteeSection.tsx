@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import styles from "./Committee.module.css";
+import styles from "./CommitteeSection.module.css";
 
 export default function CommitteeSection() {
     const president = {

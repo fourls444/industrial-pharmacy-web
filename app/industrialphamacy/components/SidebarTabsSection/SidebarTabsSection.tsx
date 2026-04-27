@@ -1,15 +1,15 @@
 "use client";
 import { useState } from "react";
-import styles from "./Menu.module.css";
+import styles from "./SidebarTabsSection.module.css";
 
 /* ✅ import เฉพาะ History ก่อน */
-import History from "@/app/history/HistorySection";
-import Vision from "@/app/vision-and-mission/VisionSection";
-import Course from "@/app/cours/CourseSection";
-import Field from "@/app/field-of-expertise/FieldSection";
-import Committee from "@/app/committee/CommitteeSection";
-import Emblem from "@/app/emblem/EmblemSection";
-import Contact from "@/app/contact-and-location/ContactSection";
+import History from "./Tabs/HistorySection/HistorySection";
+import Vision from "./Tabs/VisionMissionSection/VisionMissionSection";
+import Course from "./Tabs/CoursesSection/CoursesSection";
+import Field from "./Tabs/ExpertiseSection/ExpertiseSection";
+import Committee from "./Tabs/CommitteeSection/CommitteeSection";
+import Emblem from "./Tabs/EmblemSection/EmblemSection";
+import Contact from "./Tabs/LocationSection/LocationSection";
 
 export default function MenuSection() {
     const [active, setActive] = useState(0);

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import styles from "./Field.module.css";
+import styles from "./ExpertiseSection.module.css";
 
 export default function FieldSection() {
     const gridRef = useRef<HTMLDivElement>(null);

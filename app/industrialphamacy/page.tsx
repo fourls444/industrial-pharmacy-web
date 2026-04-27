@@ -1,0 +1,21 @@
+import HeroSection from "../components/ui/BannerSection/BannerSection";
+import AboutSection from "./components/AboutSection/AboutSection";
+import SidebarTabsSection from "./components/SidebarTabsSection/SidebarTabsSection";
+import CollegesSection from "./components/HighlightSection/HighlightSection";
+import MeetingsSection from "./components/MeetingsSection/MeetingSection";
+import NewsSection from "./components/NewsSection/NewsSection";
+import RegistrationModal from "../components/ui/RegistrationModalSection/RegistrationModal";
+
+export default function IndustrialPharmacyPage() {
+    return (
+        <div style={{ fontFamily: "var(--font-ibm-plex-sans-thai), sans-serif" }}>
+            <RegistrationModal />
+            <HeroSection />
+            <AboutSection />
+            <SidebarTabsSection />
+            <CollegesSection />
+            <MeetingsSection />
+            <NewsSection />
+        </div>
+    );
+}

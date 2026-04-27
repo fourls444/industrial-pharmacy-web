@@ -23,8 +23,8 @@ export default function Header() {
             <div className={styles.left}>
                 <img src="/favicon.ico" alt="Logo" className={styles.logo} />
                 <div className={styles.textContainer}>
-                    <h1>วิทยาลัยเภสัชกรรมอุตสาหการ</h1>
-                    <p>The College of Industrial Pharmacy of Thailand (CIPT)</p>
+                    <h1>วิทยาลัยเภสัชบำบัด</h1>
+                    <p>The College of Pharmacotherapy of Thailand (CPT)</p>
                 </div>
             </div>
 

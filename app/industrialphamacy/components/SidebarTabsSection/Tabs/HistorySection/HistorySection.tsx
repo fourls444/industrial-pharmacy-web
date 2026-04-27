@@ -1,5 +1,5 @@
 "use client";
-import styles from "./History.module.css";
+import styles from "./HistorySection.module.css";
 
 export default function HistorySection() {
     return (

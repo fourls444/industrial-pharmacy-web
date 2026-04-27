@@ -1,4 +1,4 @@
-import styles from "./Contact.module.css";
+import styles from "./LocationSection.module.css";
 
 /* SVG Icons — all white for green background */
 const PinIcon = () => (

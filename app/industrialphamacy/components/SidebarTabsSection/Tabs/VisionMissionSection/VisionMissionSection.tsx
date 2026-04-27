@@ -1,5 +1,5 @@
 "use client";
-import styles from "./Vision.module.css";
+import styles from "./VisionMissionSection.module.css";
 
 export default function VisionSection() {
     return (

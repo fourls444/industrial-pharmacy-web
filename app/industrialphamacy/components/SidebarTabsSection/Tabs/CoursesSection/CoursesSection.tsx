@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./Course.module.css";
+import styles from "./CoursesSection.module.css";
 import {
     FaGraduationCap,
     FaRegEye,

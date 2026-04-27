@@ -1,6 +1,6 @@
 import "./globals.css";
-import Header from "./components/ui/Header";
-import Footer from "./components/ui/Footer";
+import Header from "./components/ui/HeaderSection/Header";
+import Footer from "./components/ui/FooterSection/Footer";
 
 export const metadata = {
   title: "วิทยาลัยเภสัชกรรมอุตสาหการ",

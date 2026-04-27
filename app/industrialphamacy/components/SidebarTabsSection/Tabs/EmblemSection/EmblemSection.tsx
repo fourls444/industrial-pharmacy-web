@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import styles from "./Emblem.module.css";
+import styles from "./EmblemSection.module.css";
 
 export default function EmblemSection() {
     const gridRef = useRef<HTMLDivElement>(null);
