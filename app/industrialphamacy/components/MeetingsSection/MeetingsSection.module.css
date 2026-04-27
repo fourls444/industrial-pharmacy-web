@@ -88,8 +88,8 @@
 
 /* image */
 .image img {
-    width: 120px;
-    height: 80px;
+    width: 180px;
+    height: 120px;
     border-radius: 10px;
     object-fit: cover;
 }

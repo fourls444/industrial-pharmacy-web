@@ -1,5 +1,5 @@
 "use client";
-import styles from "./News.module.css";
+import styles from "./NewsSection.module.css";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 
 type NewsItem = {

@@ -1,5 +1,5 @@
 "use client";
-import styles from "./Meeting.module.css";
+import styles from "./MeetingsSection.module.css";
 import {
     HiOutlineMapPin,
     HiOutlineCalendar,

@@ -2,7 +2,7 @@ import HeroSection from "../components/ui/BannerSection/BannerSection";
 import AboutSection from "./components/AboutSection/AboutSection";
 import SidebarTabsSection from "./components/SidebarTabsSection/SidebarTabsSection";
 import CollegesSection from "./components/HighlightSection/HighlightSection";
-import MeetingsSection from "./components/MeetingsSection/MeetingSection";
+import MeetingsSection from "./components/MeetingsSection/MeetingsSection";
 import NewsSection from "./components/NewsSection/NewsSection";
 import RegistrationModal from "../components/ui/RegistrationModalSection/RegistrationModal";
 

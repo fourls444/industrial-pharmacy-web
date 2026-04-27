@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import styles from "./Highlight.module.css";
+import styles from "./HighlightSection.module.css";
 
 const CARDS = [
     { id: 1, src: "/images/highlight/highlight1.png" },

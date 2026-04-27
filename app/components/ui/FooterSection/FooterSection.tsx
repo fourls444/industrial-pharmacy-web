@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Footer.module.css";
+import styles from "./FooterSection.module.css";
 import {
     FaGlobe,
     FaFacebookF,
@@ -12,7 +12,7 @@ import {
     FaPhoneAlt,
 } from "react-icons/fa";
 
-export default function Footer() {
+export default function FooterSection() {
     return (
         <footer className={styles.footer}>
 

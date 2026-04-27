@@ -1,7 +1,7 @@
 "use client";
 
 import { LuChevronDown, LuListFilter } from "react-icons/lu";
-import styles from "./About.module.css";
+import styles from "./AboutSection.module.css";
 import { FaSearch } from "react-icons/fa";
 
 /**

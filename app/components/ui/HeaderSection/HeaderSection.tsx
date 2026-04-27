@@ -1,8 +1,8 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import styles from "./Header.module.css";
+import styles from "./HeaderSection.module.css";
 
-export default function Header() {
+export default function HeaderSection() {
     const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
     const [lang, setLang] = useState("TH");
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -23,8 +23,8 @@ export default function Header() {
             <div className={styles.left}>
                 <img src="/favicon.ico" alt="Logo" className={styles.logo} />
                 <div className={styles.textContainer}>
-                    <h1>วิทยาลัยเภสัชบำบัด</h1>
-                    <p>The College of Pharmacotherapy of Thailand (CPT)</p>
+                    <h1>วิทยาลัยเภสัชกรรมอุตสาหการ</h1>
+                    <p>The College of Industrial Pharmacy of Thailand (CIPT)</p>
                 </div>
             </div>
 

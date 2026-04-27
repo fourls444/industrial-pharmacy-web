@@ -1,6 +1,6 @@
 import "./globals.css";
-import Header from "./components/ui/HeaderSection/Header";
-import Footer from "./components/ui/FooterSection/Footer";
+import HeaderSection from "./components/ui/HeaderSection/HeaderSection";
+import FooterSection from "./components/ui/FooterSection/FooterSection";
 
 export const metadata = {
   title: "วิทยาลัยเภสัชกรรมอุตสาหการ",
@@ -15,9 +15,9 @@ export default function RootLayout({
   return (
     <html lang="th" suppressHydrationWarning>
       <body>
-        <Header />
+        <HeaderSection />
         {children}
-        <Footer />
+        <FooterSection />
       </body>
     </html>
   );
